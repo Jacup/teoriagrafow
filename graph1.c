@@ -5,6 +5,9 @@ int main () {
   int memory[y];
   printf("Podaj liczbę wierzchołków: ");
   scanf("%d", &v);
+  if (v == 0) {
+    printf("ERROR\n");
+    return 0; }
   printf("Podaj liczbę krawędzi: ");
   scanf("%d", &e);
   int graph[v][e];
@@ -24,6 +27,8 @@ int main () {
       scanf("%d %d", &v1, &v2);
       memory[y] = v1;
       memory[y+1] = v2;
+      // printf("%d\n", memory[y]);
+      // printf("%d\n", memory[y+1]);
       y +=2;
       if (v1 < 1 || v2 < 1) {
         printf("\tERROR! \nPodano wierzchołek mniejszy niż 1! \n");
@@ -36,8 +41,7 @@ int main () {
       while (!l);
       graph[v1-1][v2-1] += 1;
       graph[v2-1][v1-1] += 1;
-    }
-
+      }
 //OUTPUT
     int vmax = 0, deg = 0;
     for(x = 0; x < v; x++) {
