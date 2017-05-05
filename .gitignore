@@ -1,11 +1,12 @@
 
 Makefile
 */Makefile
-zad?
-*/zad?
-zad??
-*/zad??
+graph?
+*/graph?
+graph??
+*/graph??
 print_make
+
 
 # Prerequisites
 *.d
